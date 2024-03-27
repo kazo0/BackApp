@@ -13,6 +13,7 @@ public sealed partial class SecondPage : Page
 		
 	}
 
+#if HAS_UNO
 	private void OnLoaded(object sender, RoutedEventArgs e)
 	{
 		SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
@@ -30,4 +31,5 @@ public sealed partial class SecondPage : Page
 		// Need to set this to true to prevent the device back bubbling up to the system and closing the app
 		e.Handled = true;
 	}
+#endif
 }
