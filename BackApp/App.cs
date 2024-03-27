@@ -40,6 +40,10 @@ public class App : Application
 
         // Ensure the current window is active
         MainWindow.Activate();
+
+#if HAS_UNO
+        Windows.UI.Core.SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = Windows.UI.Core.AppViewBackButtonVisibility.Visible;
+#endif
     }
 
     /// <summary>
