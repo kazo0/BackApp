@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "BackApp",
+  "display": "standalone",
+  "name": "BackApp",
+  "short_name": "BackApp",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}

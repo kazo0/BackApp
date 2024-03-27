@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"BackApp.Windows (Unpackaged)": {
+			"commandName": "Project"
+		},
+		"BackApp.Windows (Package)": {
+			"commandName": "MsixPackage"
+		}
+	}
+}
