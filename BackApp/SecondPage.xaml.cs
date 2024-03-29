@@ -10,10 +10,8 @@ public sealed partial class SecondPage : Page
 
 		Loaded += OnLoaded;
 		Unloaded += OnUnloaded;
-		
 	}
 
-#if HAS_UNO
 	private void OnLoaded(object sender, RoutedEventArgs e)
 	{
 		SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
@@ -24,6 +22,7 @@ public sealed partial class SecondPage : Page
 		SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
 	}
 
+#if !WINDOWS
 	private void OnBackRequested(object? sender, BackRequestedEventArgs e)
 	{
 		Frame.GoBack();
