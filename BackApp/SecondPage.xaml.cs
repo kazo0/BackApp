@@ -14,15 +14,18 @@ public sealed partial class SecondPage : Page
 
 	private void OnLoaded(object sender, RoutedEventArgs e)
 	{
+#if !WINDOWS
 		SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
+#endif
 	}
 
 	 void OnUnloaded(object sender, RoutedEventArgs e)
 	{
+#if !WINDOWS
 		SystemNavigationManager.GetForCurrentView().BackRequested -= OnBackRequested;
+#endif	
 	}
 
-#if !WINDOWS
 	private void OnBackRequested(object? sender, BackRequestedEventArgs e)
 	{
 		Frame.GoBack();
@@ -30,5 +33,4 @@ public sealed partial class SecondPage : Page
 		// Need to set this to true to prevent the device back bubbling up to the system and closing the app
 		e.Handled = true;
 	}
-#endif
 }
