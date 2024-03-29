@@ -1,5 +1,5 @@
 
-Reference app from https://kazo0.dev/uno-tidbit/2024/03/28/tidbit-back-button.html
+Reference app from [Uno Tidbits: Handling the System Back Button](https://kazo0.dev/uno-tidbit/2024/03/28/tidbit-back-button.html)
 
 ## Android
 
